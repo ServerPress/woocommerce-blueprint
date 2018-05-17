@@ -37,16 +37,14 @@ ds_cli_exec( "wp plugin delete akismet" );
 ds_cli_exec( "wp plugin delete hello" );
 
 //** Remove Default Post/Page
-ds_cli_exec( "wp post delete 1" ); // Hello World!
-ds_cli_exec( "wp post delete 2" ); // Sample Page
+ds_cli_exec( "wp post delete 1 --force" ); // Hello World!
+ds_cli_exec( "wp post delete 2 --force" ); // Sample Page
 
 //** Delete First Comment
 ds_cli_exec( "wp comment delete 1" );
 
 //** Download GeoIP.dat and place in the uploads folder
 ds_cli_exec( "wget http://geolite.maxmind.com/download/geoip/database/GeoLiteCountry/GeoIP.dat.gz && gunzip GeoIP.dat.gz && mv GeoIP.dat ./wp-content/uploads/" );
-
-
 
 //** Check if index.php unpacked okay
 if ( is_file( "index.php" ) ) {
