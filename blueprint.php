@@ -9,6 +9,10 @@ ds_cli_exec( "wp core download" );
 //** Install WordPress
 ds_cli_exec( "wp core install --url=$siteName --title='WooCommerce Blueprint' --admin_user=testadmin --admin_password=password --admin_email=pleaseupdate@$siteName" );
 
+//** Set the WordPress Address(URL) and Site Address(URL)
+ds_cli_exec( "wp option update siteurl 'https://$siteName'" );
+ds_cli_exec( "wp option update home 'https://$siteName'" );
+
 //** Change the tagline
 ds_cli_exec( "wp option update blogdescription 'My Ecommerce Store'" );
 
