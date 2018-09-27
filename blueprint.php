@@ -50,6 +50,6 @@ ds_cli_exec( "wget http://geolite.maxmind.com/download/geoip/database/GeoLiteCou
 if ( is_file( "index.php" ) ) {
 
 	//** Cleanup the empty folder, download, and this script.
-	ds_cli_exec( "rm blueprint.php" );	
-
+	ds_cli_exec( "rm blueprint.php" );
+	ds_cli_exec( "rm index.htm" );
 }
